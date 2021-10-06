@@ -62,8 +62,145 @@ td_all[2].addEventListener('click', () => {
     }
 });
 
+td_all[3].addEventListener('click', () => {
+    if (sgv3_container.classList.contains('hidden')
+    ) {
+        sgv3_container.classList.remove('hidden')
+    }
+    else {
+        sgv3_container.classList.add('hidden')
+    }
+});
 
+td_all[4].addEventListener('click', () => {
+    if (sgv4_container.classList.contains('hidden')
+    ) {
+        sgv4_container.classList.remove('hidden')
+    }
+    else {
+        sgv4_container.classList.add('hidden')
+    }
+});
 
+td_all[6].addEventListener('click', () => {
+    if (sgv5_container.classList.contains('hidden')
+    ) {
+        sgv5_container.classList.remove('hidden')
+    }
+    else {
+        sgv5_container.classList.add('hidden')
+    }
+});
+
+td_all[7].addEventListener('click', () => {
+    if (sgv6_container.classList.contains('hidden')
+    ) {
+        sgv6_container.classList.remove('hidden')
+    }
+    else {
+        sgv6_container.classList.add('hidden')
+    }
+});
+
+td_all[8].addEventListener('click', () => {
+    if (sgv7_container.classList.contains('hidden')
+    ) {
+        sgv7_container.classList.remove('hidden')
+    }
+    else {
+        sgv7_container.classList.add('hidden')
+    }
+});
+
+td_all[9].addEventListener('click', () => {
+    if (sgv8_container.classList.contains('hidden')
+    ) {
+        sgv8_container.classList.remove('hidden')
+    }
+    else {
+        sgv8_container.classList.add('hidden')
+    }
+});
+
+td_all[11].addEventListener('click', () => {
+    if (sgv9_container.classList.contains('hidden')
+    ) {
+        sgv9_container.classList.remove('hidden')
+    }
+    else {
+        sgv9_container.classList.add('hidden')
+    }
+});
+
+td_all[12].addEventListener('click', () => {
+    if (sgv10_container.classList.contains('hidden')
+    ) {
+        sgv10_container.classList.remove('hidden')
+    }
+    else {
+        sgv10_container.classList.add('hidden')
+    }
+});
+
+td_all[13].addEventListener('click', () => {
+    if (sgv11_container.classList.contains('hidden')
+    ) {
+        sgv11_container.classList.remove('hidden')
+    }
+    else {
+        sgv11_container.classList.add('hidden')
+    }
+});
+
+td_all[14].addEventListener('click', () => {
+    if (sgv12_container.classList.contains('hidden')
+    ) {
+        sgv12_container.classList.remove('hidden')
+    }
+    else {
+        sgv12_container.classList.add('hidden')
+    }
+});
+
+td_all[16].addEventListener('click', () => {
+    if (sgv13_container.classList.contains('hidden')
+    ) {
+        sgv13_container.classList.remove('hidden')
+    }
+    else {
+        sgv13_container.classList.add('hidden')
+    }
+});
+
+td_all[17].addEventListener('click', () => {
+    if (sgv14_container.classList.contains('hidden')
+    ) {
+        sgv14_container.classList.remove('hidden')
+    }
+    else {
+        sgv14_container.classList.add('hidden')
+    }
+});
+
+td_all[18].addEventListener('click', () => {
+    if (sgv15_container.classList.contains('hidden')
+    ) {
+        sgv15_container.classList.remove('hidden')
+    }
+    else {
+        sgv15_container.classList.add('hidden')
+    }
+});
+
+td_all[19].addEventListener('click', () => {
+    if (sgv16_container.classList.contains('hidden')
+    ) {
+        sgv16_container.classList.remove('hidden')
+    }
+    else {
+        sgv16_container.classList.add('hidden')
+    }
+});
 
 // var rowIndex = 0;
 // var cellIndex = 0;
