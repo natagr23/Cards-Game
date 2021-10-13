@@ -15,7 +15,6 @@
 
 // });
 const sgv1_container = document.getElementById('sgv1');
-
 const sgv2_container = document.getElementById('sgv2');
 const sgv3_container = document.getElementById('sgv3');
 const sgv4_container = document.getElementById('sgv4');
@@ -39,16 +38,39 @@ const td_all = document.querySelectorAll('td');
 console.log(td_all);
 
 console.log(td_all[1]);
+console.log(td_all[2]);
+console.log(td_all[3]);
+console.log(td_all[4]);
+console.log(td_all[5]);
+console.log(td_all[6]);
+console.log(td_all[7]);
+console.log(td_all[8]);
+console.log(td_all[9]);
+console.log(td_all[10]);
+console.log(td_all[11]);
+console.log(td_all[12]);
+console.log(td_all[13]);
+console.log(td_all[14]);
+console.log(td_all[15]);
+console.log(td_all[16]);
 
 
-td_all[1].addEventListener('click', () => {
+ td_all[1].addEventListener('click', () => {
     if (sgv1_container.classList.contains('hidden')
     ) {
-        sgv1_container.classList.remove('hidden')
+        sgv1_container.classList.remove('hidden');
     }
     else {
-        sgv1_container.classList.add('hidden')
+        sgv1_container.classList.add('hidden');
     }
+    // if (localStorage.getItem('current_icon_id')=== td_all[1].id) {
+    //     console.log('already clicked')
+    //     td_all[1].remove();
+    //     td_all[11].remove();
+    // } else{
+    //     localStorage.setItem('current_icon_id', td_all[1].id);
+    //     console.log('setting current icon');
+    // }
 });
 
 
@@ -60,6 +82,14 @@ td_all[2].addEventListener('click', () => {
     else {
         sgv2_container.classList.add('hidden')
     }
+    // if (localStorage.getItem('current_icon_id')=== td_all[2].id) {
+    //     console.log('already clicked')
+    //     td_all[2].remove();
+    //     td_all[12].remove();
+    // } else{
+    //     localStorage.setItem('current_icon_id', td_all[2].id);
+    //     console.log('setting current icon')
+    // }
 });
 
 td_all[3].addEventListener('click', () => {
@@ -110,6 +140,7 @@ td_all[8].addEventListener('click', () => {
     else {
         sgv7_container.classList.add('hidden')
     }
+    
 });
 
 td_all[9].addEventListener('click', () => {
@@ -120,6 +151,15 @@ td_all[9].addEventListener('click', () => {
     else {
         sgv8_container.classList.add('hidden')
     }
+    // if (localStorage.getItem('current_icon_id')=== td_all[9].id) {
+    //     console.log('already clicked')
+    //     td_all[19].remove();
+    //     td_all[9].remove();
+    // } else{
+    //     localStorage.setItem('current_icon_id', td_all[9].id);
+    //     console.log('setting current icon')
+    // }
+   
 });
 
 td_all[11].addEventListener('click', () => {
@@ -130,6 +170,14 @@ td_all[11].addEventListener('click', () => {
     else {
         sgv9_container.classList.add('hidden')
     }
+    // if (localStorage.getItem('current_icon_id')=== td_all[11].id) {
+    //     console.log('already clicked')
+    //     td_all[1].remove();
+    //     td_all[11].remove();
+    // } else{
+    //     localStorage.setItem('current_icon_id', td_all[11].id);
+    //     console.log('setting current icon')
+    // }
 });
 
 td_all[12].addEventListener('click', () => {
@@ -140,6 +188,14 @@ td_all[12].addEventListener('click', () => {
     else {
         sgv10_container.classList.add('hidden')
     }
+    // if (localStorage.getItem('current_icon_id')=== td_all[12].id) {
+    //     console.log('already clicked')
+    //     td_all[2].remove();
+    //     td_all[12].remove();
+    // } else{
+    //     localStorage.setItem('current_icon_id', td_all[12].id);
+    //     console.log('setting current icon')
+    // }
 });
 
 td_all[13].addEventListener('click', () => {
@@ -192,7 +248,7 @@ td_all[18].addEventListener('click', () => {
     }
 });
 
-td_all[19].addEventListener('click', () => {
+button_td_19 = td_all[19].addEventListener('click', () => {
     if (sgv16_container.classList.contains('hidden')
     ) {
         sgv16_container.classList.remove('hidden')
@@ -200,7 +256,27 @@ td_all[19].addEventListener('click', () => {
     else {
         sgv16_container.classList.add('hidden')
     }
+    
+    // if (localStorage.getItem('current_icon_id')=== td_all[19].id) {
+    //     console.log('already clicked')
+    //     td_all[19].remove();
+    //     td_all[9].remove();
+    // } else{
+    //     localStorage.setItem('current_icon_id', td_all[19].id);
+    //     console.log('setting current icon')
+    // }
 });
+
+// const remove_button_sgv19 = td_all[19].addEventListener('click',() => {
+//     td_all[19].remove()
+// })
+
+
+// let equal_variables = ()=>{ (td_all[19].id === td_all[9].id)};
+
+
+
+
 
 // var rowIndex = 0;
 // var cellIndex = 0;
