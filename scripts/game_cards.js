@@ -1,44 +1,66 @@
-// const div_all = document.querySelectorAll('div');
-// console.log(div_all);
+// initialize local storage variable to empty string
+localStorage.setItem('selected_id', '');
 
-// const td_all = document.getElementsByTagName('td');
-// console.log(td_all);
+// array with winning pairs
+const list_pairs = [['td1', 'td9'], ['td2', 'td10'], ['td3', 'td11'],
+['td4', 'td12'], ['td5', 'td13'], ['td6', 'td14'], ['td7', 'td15'], ['td8', 'td16']]
+ 
+// loop through all td elements
+document.querySelectorAll('td').forEach((element) => {
+    element.addEventListener('click', () => {
+        // check if element was discovered
+        if (element.classList.contains('bg-red')) {
+            console.log("Element previously discovered")
+            return;
+        }
 
-// const id_td_container = td_all.getElementsByTagName('id')
-// console.log(id_td_container);
+        // check if image must be hidden or not
+        if (element.firstElementChild.classList.contains('hidden')) {
+            element.firstElementChild.classList.remove('hidden');
+        }
+        else {
+            element.firstElementChild.classList.add('hidden');
+        }
 
+        // get TD ids
+        const id_previously_selected = localStorage.getItem('selected_id');
+        const current_id = element.id;
 
-const div_all = document.querySelectorAll('div');
-console.log(div_all);
+        // if no id selected, means first click, save it to local storage  and return
+        if (id_previously_selected === '') {
+            localStorage.setItem('selected_id', current_id);
+            console.log(`setting current icon to ${current_id}`);
+            return;
+        }
 
-console.log(div_all[3].firstElementChild);
-
-const td_all = document.querySelectorAll('td');
-console.log(td_all);
-
-// const id_td_container = td_all.querySelector('id')
-// console.log(id_td_container)
-
-console.log(td_all[1]);
-
-
-for (let i = 0; i < 17; i++ ) {
-    // if (i===5){
-    //     continue;
-    //     }
-        
-            td_all[i].addEventListener('click', () => {
+        // search for winning couples
+        for (const pair of list_pairs) {
+            if ( pair.includes(current_id) && pair.includes(id_previously_selected)) {
+                // found match!
+                console.log(`Match found: ${current_id} and ${id_previously_selected}`);
                 
-            if (div_all[i+3].firstElementChild.classList.contains('hidden')
-            ) {
-                div_all[i+3].firstElementChild.classList.remove('hidden');
-            }
-            else {
-                div_all[i+3].firstElementChild.classList.add('hidden');
+                // delete elements from HTML
+                //document.getElementById(id_previously_selected).remove();
+                //document.getElementById(current_id).remove();
+
+                document.getElementById(id_previously_selected).classList.add('bg-red');
+                document.getElementById(id_previously_selected).classList.remove('bg-blue-lighter');
+
+                document.getElementById(current_id).classList.add('bg-red');
+                document.getElementById(current_id).classList.remove('bg-blue-lighter');
+
+                // reset selected id
+                localStorage.setItem('selected_id', '');
+
+                return;
             }
         }
-        )
-    }
-    //const new_p = copy_div.querySelector('p');
 
-    // const div_container = document.getElementById('div_container');
+        // if not found, hide both icons
+        document.getElementById(id_previously_selected).firstElementChild.classList.add('hidden');
+        document.getElementById(current_id).firstElementChild.classList.add('hidden');
+
+        // if user fail to select the correct pair, reset selection
+        localStorage.setItem('selected_id', '');
+    });
+});
